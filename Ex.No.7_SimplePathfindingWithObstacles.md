@@ -1,10 +1,15 @@
-# Ex.No: 7  Implementation of Simple Pathfinding with Obstacles
-### DATE:                                                                            
-### REGISTER NUMBER : 
-### AIM: 
+# Ex.No - 7 - Implementation of Simple Pathfinding with Obstacles
+
+### DATE: 17/08/2026                                                                            
+### REGISTER NUMBER : 212224240140
+
+### AIM:
+
 To write a program to pathfinding using AI navigation 
 ### Algorithm:
+
 ```
+
 1. Create a New Unity Project by Open the  Unity Hub and create a new 3D Project,Name the project (e.g., Pathfinding).
 2. Set Up the Scene by Create the Ground (Plane or Terrain)
   Go to: GameObject → 3D Object → Plane and Rename: "Ground"  Scale it: (10, 1, 10) (or adjust as needed)
@@ -26,9 +31,13 @@ Select an Obstacle (Cube)
 Go to: Inspector → Add Component → NavMeshObstacle and Check: ✅ "Carve"
 10.Move the Obstacle with Code ( attach it with Obstacle) 
 11. Run the program
+
 ```  
+
 ### Program:
+
 ```
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -51,7 +60,12 @@ public class AIPathfinder : MonoBehaviour
         agent.SetDestination(target.position);
     }
 }
-#Moving Obstacle
+
+```
+
+Moving Obstacle
+```
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -74,19 +88,21 @@ void Start()
         transform.position = startPos + new Vector3(movement, 0, 0);
     }
 }
+
 ```
+
 For smooth movement(optional)  -> use  
 float movement = Mathf.PingPong(Time.time * moveSpeed, moveDistance) - moveDistance / 2;
 transform.position = startPos + new Vector3(movement, 0, 0);
+
 ### Output:
 
+<img width="1917" height="965" alt="Screenshot 2026-07-29 133128" src="https://github.com/user-attachments/assets/6afea9ab-8d08-4d37-9f46-ddf307b06d6c" />
 
+<img width="1917" height="987" alt="Screenshot 2026-07-29 224001" src="https://github.com/user-attachments/assets/a73554da-bab5-4b64-94c4-b91230f8e2d1" />
 
+### Result:
 
-
-
-
-
-
+Thus the simple path finding  behavior was implemented using AI navigation successfully.
 ### Result:
 Thus the simple path finding  behavior was implemented using AI navigation successfully.
