@@ -1,10 +1,16 @@
-# Ex.No: 9  Implementation of RollarBall Design using Reinforcement Learning 
-### DATE:                                                                            
-### REGISTER NUMBER : 
+# Ex.No - 9 - Implementation of RollarBall Design using Reinforcement Learning 
+
+### DATE:  22/08/2026                                                                          
+### REGISTER NUMBER : 212224240140
+
 ### AIM: 
+
 To write a program to design RollerBall and train the Rollerbal by Reinforcement learning  in Unity 
+
 ### Installation Required 
+
 ```
+
 1.Check sytem have python 3.10.0  ( if any higher version then uninstall and install python3.10.0)
 2. Open commandprompt and Create and activate Python virtualenv by
      python -m venv venv 
@@ -13,14 +19,19 @@ To write a program to design RollerBall and train the Rollerbal by Reinforcement
    pip install numpy==1.23.5 scipy==1.10.1 h5py==3.8.0 protobuf==3.20.*
 4. install ML agents by 
    pip install mlagents==0.28.0
+
 5. install torch by 
   pip install torch torchvision torchaudio
 6. Check mlagent version and check all the main options that you can use when launching the Python trainer by 
 pip show mlagents 
 mlagents-learn --help
+
 ```
+
 ### Algorithm:
+
 ```
+
 1.Create a new 3D Unity project
 2.Create a plane → Right-click Hierarchy > 3D Object > Plane
 3.Create an Agent (Cube)
@@ -47,10 +58,14 @@ mlagents-learn --help
 15.Run tensor board in command prompt
 tensorboard --logdir results
 16 Get the results by running the localhost on specific port ( shown in tensorboard)
+
 ```  
+
 ### Program:
-```
+
 1. File : RollerAgent.cs 
+
+```
 
 using UnityEngine;
 using Unity.MLAgents;
@@ -133,7 +148,11 @@ public class RollerAgent : Agent
     }
 }
 
+```
+
 2. Create a "Rollerball.yaml" file (create a Config folder inside your project ) attach the following code 
+
+```
 
 behaviors:
   RollerBallBehavior:
@@ -157,14 +176,14 @@ behaviors:
     max_steps: 500000
     time_horizon: 64
     summary_freq: 10000
+
+```
+
 ### Output:
 
+<img width="1919" height="937" alt="Screenshot 2026-08-22 141941" src="https://github.com/user-attachments/assets/1a532f33-65c9-49df-8579-07fa880bcb17" />
 
-
-
-
-
-
+<img width="1919" height="948" alt="Screenshot 2026-08-22 141922" src="https://github.com/user-attachments/assets/fba5e866-dd2e-45c6-8342-e3d6ff864123" />
 
 
 ### Result:
